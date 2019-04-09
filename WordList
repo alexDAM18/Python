@@ -1,0 +1,27 @@
+#4.- Escriba un programa que permita crear una lista de palabras y que, a continuación, pida una
+#palabra y elimine esa palabra de la lista.
+  #1.El programa pide el número de palabras a insertar en la lista.
+  #2.Introducimos las palabras en la lista.
+  #3.Muestra el estado de la lista.
+  #4.El programa pide la palabra a borrar en la lista.
+  #5.Comprueba que la palabra está en la lista y la borra.
+  #6.Muestra el estado final de la lista
+
+
+numero = int(input("Dime cuántas palabras tiene la lista: "))
+
+if numero < 1:
+    print("Debe introducir más palabras en la lista")
+else:
+    lista = []
+    for i in range(numero):
+        print("Pon la palabra número", str(i + 1) + ": ", end="")
+        palabra = input()
+        lista += [palabra]
+    print("La lista que acabas de hacer es:", lista)
+
+    eliminar = input("Elige que palabras quieres eliminar: ")
+    for i in range(len(lista)-1, -1, -1):
+        if lista[i] == eliminar:
+            del (lista[i])
+    print("Ahora la lista es:", lista)

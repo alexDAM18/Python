@@ -1,0 +1,36 @@
+from random import *
+
+#1.- Crea un programa de adivinar un número. Generaremos un número de forma aleatoria entre el 1
+#y el 50. E iremos preguntando al usuario hasta que acierte o consuma todos los intentos. Le daremos
+#como pista la indicación de si es mayor o menor.
+
+
+rnum = randrange(50) + 1
+intentos = 5
+
+
+num = int(input("Introduce un numero: "))
+intentos -= 1
+print("Te quedan ", intentos, " intentos")
+
+while intentos != 0 | num !=rnum:
+
+    if num > rnum:
+     print("Tu número es mayor")
+     num = int(input("Introduce un numero: "))
+     intentos -= 1
+     print("Te quedan ", intentos, " intentos")
+
+    if num < rnum:
+     print("Tu número es menor")
+     num = int(input("Introduce un numero: "))
+     intentos -= 1
+     print("Te quedan ", intentos, " intentos")
+
+if num == rnum:
+    print("Has acertado")
+
+else:
+    print("Has perdido")
+
+

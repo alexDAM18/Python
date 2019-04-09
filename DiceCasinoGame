@@ -1,0 +1,90 @@
+from random import *
+
+#2.- Crea un programa para jugar a los dados estilo las Vegas (Craps). El jugador nos dirá la cantidad
+#de dinero que tiene. En cada tirada le permitiremos apostar mientras tenga dinero en el bote. Si gana
+#duplicará la cantidad apostada, si pierde se quedará sin la apuesta. Si pierde o si gana se le deberá
+#preguntar si quiere seguir jugando.
+
+
+"""Cuando se juega en un casino contra la banca, o casa, uno o varios jugadores realizan diversas
+apuestas al resultado que se obtendrá en los dados que lance alguno de los jugadores, el cual es
+designado «tirador» o «shooter» por su nombre en inglés. Para comenzar el juego, durante lo que se
+conoce como «tiro de salida», el jugador necesita realizar una apuesta que se conoce como «línea de
+pase», en la que se busca obtener un siete (conocido como «siete natural» o «siete ganador») o un
+once en la combinación de dados para ganar la apuesta, que paga uno a uno.
+
+Si por el contrario obtiene un dos, tres o doce (números conocidos como «craps») pierde
+automáticamente su apuesta y necesitará colocar de nuevo una apuesta para seguir tirando.
+Si durante el primer lanzamiento no obtiene un siete u once (con que gana), o un dos, tres o doce
+(con que pierde), el juego entrará en una segunda etapa, en la que se marcará el «punto» en el
+número que se obtenga en dicho lanzamiento (cuatro, cinco, seis, ocho, nueve o diez).
+
+En esta etapa, el tirador buscará volver a obtener ese número en los dados, con lo que ganará el
+«roll» o «ronda», antes de obtener un siete, llamado «siete fuera» o «seven out». Si logra repetir el
+número del punto, el jugador ganará su apuesta y se le pagará uno a uno el monto. Si por el
+contrario si aparece un siete, perderá su apuesta. En ambos casos se considera que la ronda ha
+terminado y el juego vuelve a comenzar, aunque si la ronda culminó debido a un siete fuera se
+designará un nuevo tirador de entre los distintos jugadores."""
+
+
+#Segunda ronda, la tirada anterior marca la que gana ahora
+
+playerMoney = int(input("¿Cuanto dinero tiene el jugador? "))
+answer = True
+no = "no"
+
+while answer==True:
+
+    cantDinero = int(input("¿Cuanto dinero quieres apostar? "))
+    if cantDinero > playerMoney:
+        print("No tienes tanto dinero")
+        break
+    dadoUno = randrange(6) + 1
+    dadoDos = randrange(6) + 1
+    resultado = dadoUno + dadoDos
+    print("Has sacado: ", resultado)
+
+    if resultado == 7 or resultado == 11:
+        playerMoney = playerMoney + (cantDinero*2)
+        print("Has ganado, ahora tienes ", playerMoney)
+        f_in = input("¿Quieres seguir jugando?")
+        if f_in == no:
+            print("Te has quedado con ", playerMoney, "€")
+            answer = False
+        else:
+            answer = True
+
+    elif resultado == 2 or resultado == 3 or resultado == 12:
+         print("Has perdido tu dinero apostado")
+         playerMoney = playerMoney - cantDinero
+         f_in = input("¿Quieres seguir jugando?")
+         if f_in == no:
+             print("Te has quedado con ", playerMoney, "€")
+             answer = False
+         else:
+             answer = True
+
+    elif resultado == 4 or resultado == 5 or resultado == 6 or resultado == 8 or resultado == 9 or resultado == 10:
+        linea = resultado
+        print("Tienes que sacar ",linea," para ganar")
+        dadoUno = randrange(6) + 1
+        dadoDos = randrange(6) + 1
+
+        resultado2 = dadoUno + dadoDos
+        print("Has sacado un: ", resultado2)
+
+        if resultado2 == linea:
+            playerMoney = playerMoney + (cantDinero*2)
+            print("Has ganado, ahora tu total es: ", playerMoney)
+            answer = False
+
+
+        elif resultado2 == 7:
+         print("Has perdido")
+         answer = False
+
+        elif resultado2 != linea:
+            playerMoney = playerMoney - cantDinero
+            print("Has perdido todo tu dinero apostado, ahora tienes ", playerMoney)
+            answer = False
+

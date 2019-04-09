@@ -1,0 +1,21 @@
+"""4.- Genera un programa que pase un número dado por el usuario en decimal a binario.
+Haz el paso contrario de binario a decimal"""
+
+
+print ("Elige una operación a realizar: ")
+
+print ("1 - Decimal a Binario")
+print ("2 - Binario a Decimal")
+
+opcion = input("¿Que quieres hacer?")
+
+if opcion == "1":
+    print ("Introduce el numero decimal y se convertira en un numero binario")
+    numDec = int(input("Introduce un numero: "))
+    print ("El numero en Binario es: %s " % bin(numDec))
+
+if opcion == "2":
+    print ("Introduce el numero binario y se convertira en un numero decimal")
+
+    numBin = str(input("Introduce un numero : "))
+    print ("El numero en Decimal es: %s " % int(numBin, 2))

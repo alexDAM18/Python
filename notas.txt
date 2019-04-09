@@ -1,0 +1,8 @@
+Apellidos:Nombre:Parcial 1:Parcial 2:Parcial 3:Parcial 4
+González Pérez:Jesús:7:8:6:8:
+Velmez Rodriguez:Raquel:5:2:4:4:
+Salgado Ruiz:Vicente:4:5:6:3:
+Marttinez Gual:Jaime:7:9:8:7:
+Salvador Mateo:Alicia:9:8:9:7:
+Gutierrez Navarro:Juan:4:2:4:3:
+Pastor Galvez:Patricia:4:3:4:2:

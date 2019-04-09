@@ -1,0 +1,26 @@
+
+"""3.- Crea un programa que desglose una cantidad de dinero en euros dado por el ususario en billetes
+y monedas.
+Si el usuario introduce 577 euros la salida del programa nos dará:
+1 billete de 500 euros
+1 billete de 50 euros
+1 billete de 20 euros
+1 billete de 5 euros
+1 moneda de 2 euros"""
+
+# Introducir datos a la variable.
+cantidad = int(input("Ingresa una cantidad de dinero: "))
+
+# Variables Billetes.
+billetes = [500, 200, 100, 50, 20, 10, 5]
+
+# Variable Monedas
+monedas = [2, 1]
+
+for billete in billetes:
+    print ("%d Billete/s de %d" % ((cantidad /billete), billete))
+    cantidad = cantidad % billete
+
+for moneda in monedas:
+    print ("%d Moneda/s de %d" % ((cantidad /moneda),moneda))
+    cantidad = cantidad % moneda

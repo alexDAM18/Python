@@ -1,0 +1,23 @@
+#3.- Escriba un programa que pregunte primero si se quiere calcular el área de un triángulo o la de un
+#círculo. Si se contesta que se quiere calcular el área de un triángulo, el programa tiene que pedir
+#entonces la base y la altura y escribir el área. Si se contesta que se quiere calcular el área de un
+#círculo, el programa tiene que pedir entonces el radio y escribir el área.
+#Se recuerda que el área de un triángulo es base por altura dividido por 2 y que el área de un círculo
+#es Pi (aproximadamente 3,141592) por el radio al cuadrado
+
+circulo = "circulo"
+triangulo = "triangulo"
+
+f_in = input("Elige que area quieres calcular: Triangulo. Circulo")
+
+if f_in == triangulo:
+        base = int(input("Introduce una base"))
+        altura = int(input("Introudce una altura"))
+        area = float(base*altura)/2
+        print("El area del triangulo es ", area)
+
+if f_in == circulo:
+        radio = int(input("Introduce el radio del circulo"))
+        pi = 3.141592
+        area = float(pi * (radio*radio))
+        print("El area del circulo es ", area)

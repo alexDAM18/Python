@@ -1,0 +1,14 @@
+#2.- Escriba un programa que pida una cantidad de segundos y que escriba cuántas horas, minutos y
+#segundos son.
+
+seg = int(input("Introduce los segundo que quieras"))
+
+segundos = int(seg%60)
+m = seg/60
+minutos = int(m%60)
+horas =int (m/60)
+
+
+print("Horas: ", horas , " Minutos: ", minutos, " Segundos: ", segundos)
+
+

@@ -1,0 +1,8 @@
+#1.- Escriba un programa que pida el peso (en kilogramos) y la altura (en metros) de una persona y
+#que calcule su índice de masa corporal (imc).
+
+peso = int(input("Introduce tu peso: "))
+altura = float(input("Introduce tu altura: "))
+float(altura)
+imc = peso / (altura*altura)
+print(imc)

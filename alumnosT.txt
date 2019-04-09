@@ -1,0 +1,10 @@
+DNI:Apellidos:Nombre:Turno
+12586952E:Grande Grande:Benito:2:
+46358952Q:Forrester:Ben:2:
+25698425R:Flores:Juan Carlos:5:
+98574224L:Veiga Blanco:Adolfo:4:
+23658254W:Montañes Montañes:Roberto:4:
+69812541E:Saez:Alejandro:1:
+78223658D:Merino:Maria:8:
+69558214F:Verde Mejías:Olga:4:
+12586950E:Grande Grande:Benito2:10:
